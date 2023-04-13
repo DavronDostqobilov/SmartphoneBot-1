@@ -2,6 +2,8 @@ from telegram import (
     Update,
     ReplyKeyboardMarkup,
     KeyboardButton,
+    InlineKeyboardMarkup,
+    InlineKeyboardButton
 )
 from db import UserDb
 
@@ -36,5 +38,9 @@ def about(update: Update, context):
 
 def contact(update: Update, context):
     '''Contact command handler'''
-    # send message
-    pass 
+    query=update.callback_query
+    data=query.data
+    inline_keyboard = [
+        [InlineKeyboardButton('📞 Phone number'), InlineKeyboardButton('📌 Address')],
+        [InlineKeyboardButton('📍 Location'), InlineKeyboardButton('📧 Email')],]
+    query.edit_message_text('Contact menu', reply_markup=InlineKeyboardMarkup(inline_keyboard))
