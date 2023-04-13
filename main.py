@@ -41,6 +41,7 @@ def contact(update: Update, context):
     query=update.callback_query
     data=query.data
     inline_keyboard = [
+        
         [InlineKeyboardButton('📞 Phone number'), InlineKeyboardButton('📌 Address')],
         [InlineKeyboardButton('📍 Location'), InlineKeyboardButton('📧 Email')],]
     query.edit_message_text('Contact menu', reply_markup=InlineKeyboardMarkup(inline_keyboard))
