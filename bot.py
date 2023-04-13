@@ -9,6 +9,8 @@ from main import (
     start,
     about,
     contact,
+    contact_callback,
+    buy,
 )
 import os
 
@@ -24,6 +26,8 @@ def main():
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(MessageHandler(Filters.text('📝 About'), about))
     dispatcher.add_handler(MessageHandler(Filters.text('📞 Contact'), contact))
+    dispatcher.add_handler(MessageHandler(Filters.text('🛒 Buy'), buy))
+    dispatcher.add_handler(CallbackQueryHandler(contact_callback))
 
     # start bot
     updater.start_polling()
