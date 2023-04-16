@@ -35,7 +35,12 @@ class UserDb:
         }
         return self.order_table.insert(order)
     
-    def clear_order(self, chat_id: str):
+    def get_order(self, chat_id: int):
+        orders=self.order_table.search(self.query.chat_id ==chat_id)
+        return orders
+    
+
+    def clear_order(self, chat_id: int):
         return self.order_table.remove(self.query.chat_id == chat_id)
     
 class ProductDB:
@@ -51,5 +56,6 @@ class ProductDB:
         return table.all()
     
     def get_product(self, brand, product_id):
-        table = self.db.table(brand)
-        return table.get(doc_id=product_id)
+        table = self.db.table(brand) 
+        brendcha=table.get(doc_id=product_id)
+        return brendcha

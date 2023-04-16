@@ -17,7 +17,44 @@
             "first_name": "Davron",
             "username": "Davron0311",
             "last_name": "Do'stqobilov"
+        },
+        "8": {
+            "chat_id": 1477817763,
+            "first_name": "Ja'far Xasan o'g'li",
+            "username": null,
+            "last_name": null
+        },
+        "9": {
+            "chat_id": 1120689184,
+            "first_name": "Amulya soni",
+            "username": null,
+            "last_name": null
+        },
+        "10": {
+            "chat_id": 1698951222,
+            "first_name": "Anasxon",
+            "username": "U1_UXdesigner",
+            "last_name": "A'zamov"
         }
     },
-    "Order": {}
+    "Order": {
+        "1": {
+            "chat_id": 1432402481,
+            "product_id": 14,
+            "company": "Vivo",
+            "quantity": 1
+        },
+        "2": {
+            "chat_id": 1432402481,
+            "product_id": 15,
+            "company": "Vivo",
+            "quantity": 1
+        },
+        "3": {
+            "chat_id": 1432402481,
+            "product_id": 16,
+            "company": "Vivo",
+            "quantity": 1
+        }
+    }
 }
